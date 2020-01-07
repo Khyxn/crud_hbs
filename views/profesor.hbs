@@ -1,0 +1,30 @@
+<!-- {{> bootstrap}}
+{{> navbar}}
+<div class="container-fluid"><br><br>
+<div class="jumbotron">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title"><h2><center>Actualización del profesor <span class="far fa-edit"></span></center></h2></div>
+      <form  action="docente" method="POST">
+        <div class="form-group">
+          <input type="hidden" class="form-control" name="_id" value="{{docente._id}}">
+        </div>
+         <div class="form-group">
+           <label for="nombre">Nombre</label>
+           <input type="text" class="form-control" name="nombre" value="{{docente.nombre}}">
+         </div>
+         <div class="form-group">
+           <label for="apellido">Apellido</label>
+           <input type="text" class="form-control" name="apellido" value="{{docente.apellido}}">
+         </div>
+         <div class="form-group">
+          <label for="profesion">Profesión</label>
+          <input type="text" class="form-control" name="profesion" value="{{docente.profesion}}">
+         </div>
+         <button type="submit" class="btn btn-success">Actualizar</button>
+         <a href="/" class="btn btn-danger">Cancelar</a>
+      </form>
+    </div>
+  </div>
+</div>
+</div> -->

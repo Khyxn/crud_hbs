@@ -1,0 +1,39 @@
+	{{> bootstrap}}
+  {{> navbar}}
+<div class="container-fluid"><br><br>
+  <div class="jumbotron">
+		<div class="card">
+	  	<div class="card-body">
+	  		<div class="card-title"><h2><center>Registro de profesores <span class="far fa-edit"></span></center></h2></div>
+				<form  action="/guardart/docente/insertar" method="POST">
+					<div class="form-group">
+						<!-- <label for="id">Id</label> -->
+						<input type="hidden" class="form-control" name="_id" value="{{docente._id}}">
+					</div>
+					 <div class="form-group">
+					 	 <label for="nombre">Nombre</label>
+						 <input type="text" class="form-control" name="nombre" value="{{docente.nombre}}">
+					 </div>
+					 <div class="form-group">
+					 	 <label for="apellido">Apellido</label>
+						 <input type="text" class="form-control" name="apellido" value="{{docente.apellido}}">
+					 </div>
+					 <div class="form-group">
+					 	<label for="profesion">Profesión</label>
+						<input type="text" class="form-control" name="profesion" value="{{docente.profesion}}">
+					 </div>
+					 <!--new insertion-->
+					 <div class="form-group">
+             <label for="perfil">Img.Perfil</label>
+						 <div>
+						 	<input type="file" name="imgperfil" class="form-control" value="{{docente.imgperfil}}" id="caja">
+						 </div>
+					 </div>
+					 <!--new insertion-->
+					 <button type="submit" class="btn btn-success">Guardar</button>
+					 <a href="/" class="btn btn-danger">Cancelar</a>
+				</form>
+	  	</div>
+	  </div>
+  </div>
+</div>

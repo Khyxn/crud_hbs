@@ -1,0 +1,30 @@
+{{> bootstrap}}
+{{> navbar }}
+<div class="container-fluid"><br><br>
+  <div class="jumbotron">
+    <div class="card-body">
+       <h1><center>Listado de estudiantes</center></h1>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Grado</th>
+        <th>Operaciones</th>
+      </thead>
+      <tbody>
+        {{#each estudiantes}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.nombre}}</td>
+          <td>{{this.grado}}</td>
+          <td>
+            <button type="button" class="btn btn-secondary"><a href="/estudiante/modificar/{{this._id}}">Editar</a></button>
+            <button type="button" class="btn btn-warning"><a href="/estudiante/{{this._id}}">Eliminar</a></button>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

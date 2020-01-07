@@ -1,0 +1,33 @@
+{{> bootstrap}}
+{{> navbar}}
+<div class="container-fluid"><br><br>
+  <div class="jumbotron">
+		<div class="table table-responsive">
+		<table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Profesión</th>
+          <th>Img.Perfil</th>
+					<th>Operaciones</th>
+        </tr>
+				</thead>
+				{{#each profesores}}
+				<tr>
+					<td>{{this.id}}</td>
+					<td>{{this.nombre}}</td>
+					<td>{{this.apellido}}</td>
+					<td>{{this.profesion}}</td>
+          <td>{{this.imgperfil}}</td>
+					<td>
+					<button type="button" class="btn btn-success"><a href="/docente/modificar/{{this._id}}">Editar</a></button>
+					<button type="button" class="btn btn-danger"><a href="/docente/{{this._id}}">Eliminar</a></button>
+					</td>
+				</tr>
+				{{/each}}
+    </table>
+		</div>
+  </div>
+</div>

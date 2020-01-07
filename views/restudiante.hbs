@@ -1,0 +1,41 @@
+{{> bootstrap}}
+{{> navbar}}
+<div class="container"><br><br>
+  <div class="jumbotron">
+    <div class="card">
+      <div class="card-title">
+        <h1><center>Registro de estudiantes</center></h1>
+      </div>
+      <div class="card-body">
+        <form role="form" action="/guardare/estudiante/insertar" method="POST">
+         <div class="form-group">
+           <input type="hidden" class="form-control" name="_id" value="{{estudiante._id}}">
+         </div>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" name="nombre" value="{{estudiante.nombre}}">
+          </div>
+          <div class="form-group">
+            <label for="grado">Grado</label>
+            <select name="grado" value="{{estudiante.grado}}">
+              <option>Seleccione el grado</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success">Guardar</button>
+          <a href="/" class="btn btn-danger">Cancelar</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

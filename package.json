@@ -1,0 +1,23 @@
+{
+  "name": "mkultra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon corriendo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "hbs": "^4.0.6",
+    "mongoose": "^5.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
